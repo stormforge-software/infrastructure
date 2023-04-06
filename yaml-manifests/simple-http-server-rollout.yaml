@@ -20,5 +20,5 @@ spec:
   strategy:
     blueGreen:
       activeService: simple-http-server-rollout-service
-      previewService: simple-http-rollout-service-preview
+      previewService: simple-http-server-rollout-service-preview
       autoPromotionEnabled: false
