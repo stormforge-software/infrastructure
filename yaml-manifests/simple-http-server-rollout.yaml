@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
-  name: simple-http-server-deployment
+  name: simple-http-server-rollout
 spec:
   replicas: 3
   selector:
