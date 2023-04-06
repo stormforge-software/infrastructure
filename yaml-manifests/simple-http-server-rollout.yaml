@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
+metadata:
+  name: simple-http-server-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: simple-http-server-for-rollout
+  template:
+    metadata:
+      labels:
+        app: simple-http-server-for-rollout
+    spec:
+      containers:
+      - name: simple-http-server
+        image: ghcr.io/stormforge-software/simple-http-server:4621690681
+        ports:
+        - containerPort: 8080
+      strategy:
+        blueGreen:
+          activeService: simple-http-server-service
+          previewService: simple-http-service-preview
+          autoPromotionEnabled: false
