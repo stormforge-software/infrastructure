@@ -19,6 +19,6 @@ spec:
         - containerPort: 8080
     strategy:
       blueGreen:
-        activeService: simple-http-server-service
-        previewService: simple-http-service-preview
+        activeService: simple-http-server-rollout-service
+        previewService: simple-http-rollout-service-preview
         autoPromotionEnabled: false
