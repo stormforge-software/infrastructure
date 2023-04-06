@@ -17,8 +17,8 @@ spec:
         image: ghcr.io/stormforge-software/simple-http-server:4621690681
         ports:
         - containerPort: 8080
-    strategy:
-      blueGreen:
-        activeService: simple-http-server-rollout-service
-        previewService: simple-http-rollout-service-preview
-        autoPromotionEnabled: false
+  strategy:
+    blueGreen:
+      activeService: simple-http-server-rollout-service
+      previewService: simple-http-rollout-service-preview
+      autoPromotionEnabled: false
