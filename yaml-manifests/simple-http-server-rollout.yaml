@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: simple-http-server
-        image: ghcr.io/stormforge-software/simple-http-server:4630591641
+        image: ghcr.io/stormforge-software/simple-http-server:4630245012
         ports:
         - containerPort: 8080
   strategy:
