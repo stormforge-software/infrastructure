@@ -14,6 +14,14 @@ spec:
     spec:
       containers:
       - name: simple-http-server
-        image: ghcr.io/stormforge-software/simple-http-server:4621690681
+        image: ghcr.io/stormforge-software/simple-http-server:4631640521
         ports:
         - containerPort: 8080
+        volumeMounts:
+        - mountPath: "/app/application-secret/"
+          name: application-secret
+          readOnly: true
+      volumes:
+        - name: application-secret
+          secret:
+            secretName: application-secret
