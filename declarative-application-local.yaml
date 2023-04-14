@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: eportal-print-ui
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/stormforge-software/infrastructure.git
+    targetRevision: local
+    path: eportal-yaml-manifests
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: eportal-print-ui
+  syncPolicy:
+    automated: {}
+    syncOptions:
+    - CreateNamespace=true
