@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: eportal-print-ui
-          image: 872850038545.dkr.ecr.us-east-1.amazonaws.com/eportal-print-ui:1.2.1
+          image: 872850038545.dkr.ecr.us-east-1.amazonaws.com/eportal-print-ui:1.2.2-setup-java.1
           env:
             - name: BACKEND_HOST
               value: http://eportal-nonprod-print.cellsignal.com:8080
